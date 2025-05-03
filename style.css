@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #fce4ec);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form label, .form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #388E3C;
+    transform: scale(1.05);
+}
+
+.resultados, #temporizador {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#pausarButton, #reiniciarButton {
+    padding: 12px 20px;
+    margin: 10px 5px 0;
+    border: none;
+    border-radius: 8px;
+    background: #FFEB3B;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pausarButton:hover, #reiniciarButton:hover {
+    background: #FFC107;
+    transform: scale(1.05);
+}
+.barra-contenedor {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  #barraProgreso {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 1s linear;
+  }
+  

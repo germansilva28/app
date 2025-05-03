@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Rutinas de Estudio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- Audio de alarma -->
+<audio id="alarmaAudio" preload="auto">
+    <source src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" type="audio/ogg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  
+  
+<body>
+    <div class="container">
+        <h1>🎓 Generador de Rutinas de Estudio</h1>
+
+        <div class="form">
+            <label for="horas">Horas de estudio:</label>
+            <input type="number" id="horas" min="1" required>
+            
+
+            <label for="asignaturas">Número de asignaturas:</label>
+            <input type="number" id="asignaturas" min="1" required>
+            <label for="nombresAsignaturas">Nombres de las asignaturas (separados por comas):</label>
+            <input type="text" id="nombresAsignaturas" placeholder="Ejemplo: Matemáticas, Historia, Inglés">
+            
+            <label for="sesion">Duración de cada sesión (minutos):</label>
+            <input type="number" id="sesion" min="1" required>
+
+            <label for="descanso">Duración del descanso (minutos):</label>
+            <input type="number" id="descanso" min="1" required>
+
+            <button id="generarRutina">Generar Rutina</button>
+        </div>
+
+        <div class="resultados">
+            <h2>📋 Detalles de la Rutina</h2>
+            <p><strong>Horas Totales:</strong> <span id="detallesHorasEstudio">-</span></p>
+            <p><strong>Asignaturas:</strong> <span id="detallesAsignaturas">-</span></p>
+            <p><strong>Sesión de Estudio:</strong> <span id="detallesSesionEstudio">-</span> min</p>
+            <p><strong>Descanso:</strong> <span id="detallesDescanso">-</span> min</p>
+
+            <button id="startSessionButton" style="display:none;">Iniciar Sesión</button>
+            <h3>📚 Distribución por Asignatura</h3>
+            <ul id="listaAsignaturas"></ul>
+            
+        </div>
+
+        <div id="temporizador" style="display:none;">
+            <p id="temporizadorTexto">Tiempo restante: <span id="tiempoRestante">0</span> minutos</p>
+            <div class="barra-contenedor">
+                <div id="barraProgreso"></div>
+              </div>
+              
+            <p id="estadoSesion"></p>
+            <button id="pausarButton">Pausar</button>
+            <button id="reiniciarButton">Reiniciar</button>
+            <button onclick="document.getElementById('alarmaAudio').play()">Probar sonido</button>
+
+<!-- Agregar esta parte dentro de la sección del formulario -->
+<label for="audioAlarma">Selecciona un sonido para la alarma:</label>
+<input type="file" id="audioAlarma" accept="audio/*">
+
+
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
